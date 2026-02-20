@@ -1,31 +1,39 @@
-body {
+/*  RESET  */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
     font-family: 'Segoe UI', sans-serif;
     background: radial-gradient(circle at top, #1e293b, #0f172a 70%);
     color: #e2e8f0;
+    line-height: 1.6;
 }
 
-/* HEADER */
+/*  HEADER  */
 header {
     text-align: center;
-    padding: 30px;
+    padding: 40px 20px;
     background: linear-gradient(90deg, #0f172a, #1e293b);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    box-shadow: 0 4px 25px rgba(0,0,0,0.6);
 }
 
-h1 {
-    font-size: 2.2rem;
+header h1 {
+    font-size: 2.4rem;
     letter-spacing: 1px;
 }
 
-/* NAV */
+
 nav ul {
     list-style: none;
-    padding: 0;
+    margin-top: 20px;
 }
 
 nav li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
@@ -33,86 +41,129 @@ nav a {
     color: #38bdf8;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #22d3ee;
 }
 
-/* SECTIONS */
+
 section {
-    padding: 60px 10%;
+    padding: 80px 10%;
 }
 
-/* IMAGE 
+#descripcion {
+    text-align: center;
+}
+
+#descripcion p {
+    max-width: 800px;
+    margin: 20px auto;
+    color: #cbd5e1;
+}
+
+#descripcion img {
+    width: 70%;
+    max-width: 700px;
+    margin: 30px auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+/*  IMÁGENES GENERALES  */
 img {
-    border-radius: 10px;
-    box-shadow: 0 0 25px rgba(0, 200, 255, 0.2);
-}*/
+    max-width: 100%;
+    border-radius: 12px;
+}
 
+/*  SECCIÓN AMENAZAS  */
+#amenazas {
+    background: rgba(15,23,42,0.6);
+    border-radius: 20px;
+}
 
-/* GRID DE AMENAZAS */
+#amenazas h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* GRID */
 .amenazas-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    margin-top: 40px;
+    gap: 30px;
 }
 
 /* TARJETAS */
 .card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    padding: 25px;
+    border-radius: 16px;
     text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    transition: 0.4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    border: 1px solid rgba(56,189,248,0.2);
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 25px rgba(56,189,248,0.6);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(56,189,248,0.5);
 }
 
 .card img {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: 160px;
     object-fit: cover;
+    border-radius: 12px;
     margin-bottom: 15px;
 }
 
-/* BUTTONS */
+.card h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+
 button {
     padding: 12px 25px;
     background: linear-gradient(90deg, #2563eb, #1d4ed8);
     border: none;
     color: white;
     font-weight: bold;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
     box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
 }
 
 button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(37, 99, 235, 0.8);
+    transform: scale(1.07);
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.8);
 }
 
-/* SYSTEM PANEL */
+/*  PANEL DEL SISTEMA  */
 #systemPanel {
-    background: rgba(15, 23, 42, 0.8);
+    margin-top: 30px;
+    background: rgba(15, 23, 42, 0.9);
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 40px rgba(0,0,0,0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.7);
 }
 
-/* INTEGRITY BAR */
+/*  BARRA DE INTEGRIDAD  */
 .integrity-container {
     width: 100%;
-    height: 22px;
+    height: 25px;
     background: #334155;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
     margin: 15px 0;
 }
@@ -124,35 +175,114 @@ button:hover {
     transition: 0.4s;
 }
 
-/* ALERT BOX */
+/*  ALERTA  */
 .alert-box {
     margin-top: 25px;
-    padding: 20px;
+    padding: 25px;
     background: linear-gradient(90deg, #7f1d1d, #991b1b);
-    border-radius: 8px;
-    box-shadow: 0 0 30px rgba(220, 38, 38, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.7);
 }
 
-/* CONSOLE */
+
 .console {
     margin-top: 20px;
     background: black;
     padding: 15px;
     font-family: monospace;
-    border-radius: 6px;
-    box-shadow: inset 0 0 15px rgba(0,255,0,0.3);
+    border-radius: 8px;
+    box-shadow: inset 0 0 15px rgba(0,255,0,0.4);
     min-height: 80px;
 }
 
-/* FOOTER */
+
+#contacto {
+    background: rgba(15,23,42,0.7);
+    border-radius: 20px;
+}
+
+#contacto h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+form label {
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(56,189,248,0.3);
+    background: #0f172a;
+    color: #e2e8f0;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border: 1px solid #38bdf8;
+    box-shadow: 0 0 10px rgba(56,189,248,0.5);
+}
+
+/* FOOTER  */
 footer {
     background: #1e293b;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 25px;
+    margin-top: 50px;
 }
 
-/* HIDDEN */
+
+@media (max-width: 1000px) {
+    .amenazas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .amenazas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 .hidden {
     display: none;
+}
+
+
+#simulacion {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #1e293b;
+}
+
+.btn-simulacion {
+    padding: 15px 30px;
+    background-color: #22c55e;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-simulacion:hover {
+    background-color: #16a34a;
 }
