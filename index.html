@@ -23,6 +23,76 @@
         </nav>
     </header>
 
+<main>
+
+    <section id="descripcion">
+        <h2>Descripción del Proyecto</h2>
+        <p>
+            Este proyecto es una simulación básica de un sistema corporativo bajo ataque.
+            Fue desarrollado como proyecto final utilizando HTML, CSS y JavaScript.
+        </p>
+
+        <img src="img/cybersecurity.jpg" alt="Imagen representativa de ciberseguridad" width="500">
+        
+        <p>
+            Aprende más sobre ciberseguridad visitando
+            <a href="https://www.incibe.es" target="_blank">INCIBE</a>.
+        </p>
+    </section>
+
+    <section id="amenazas">
+        <h2>Amenazas Comunes</h2>
+        <ul>
+            <li>Gusanos</li>
+            <li>Troyanos</li>
+            <li>Ransomware</li>
+            <li>Ataques DDoS</li>
+        </ul>
+    </section>
+
+    <section id="simulacion">
+        <h2>Simulación Interactiva</h2>
+        <button id="startBtn">Iniciar Simulación</button>
+
+        <article id="systemPanel" class="hidden">
+
+            <h3>Sistema Corporativo v2.6</h3>
+            <p id="statusText">Estado: Operativo</p>
+
+            <div class="integrity-container">
+                <div id="integrityBar"></div>
+            </div>
+            <p id="integrityValue">Integridad del Sistema: 100%</p>
+
+            <div class="alert-box hidden" id="alertBox">
+                <h3>⚠️ Archivo Sospechoso Detectado</h3>
+                <p>Archivo detectado: <strong>factura_2026.pdf.exe</strong></p>
+
+                <button id="openFile">Abrir Archivo</button>
+                <button id="isolateFile">Aislar Archivo</button>
+                <button id="deleteFile">Eliminar Archivo</button>
+            </div>
+
+            <div id="consoleLog" class="console"></div>
+
+        </article>
+    </section>
+
+    <section id="contacto">
+        <h2>Reporte de Incidente</h2>
+
+        <form>
+            <label for="email">Correo:</label><br>
+            <input type="email" id="email" required><br><br>
+
+            <label for="mensaje">Descripción:</label><br>
+            <textarea id="mensaje" rows="4"></textarea><br><br>
+
+            <button type="submit">Enviar Reporte</button>
+        </form>
+    </section>
+
+</main>
 
     <footer>
         <p>Proyecto Final - Desarrollo Web Básico</p>
