@@ -9,3 +9,6 @@ Simulación interactiva de un sistema corporativo bajo ataque.
 - HTML5
 - CSS3
 - JavaScript
+
+## Pages
+- https://yennifer28.github.io/ProyectoFinal_TraxionBecalos/
