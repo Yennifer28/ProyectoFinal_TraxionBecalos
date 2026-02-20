@@ -44,10 +44,41 @@ section {
     padding: 60px 10%;
 }
 
-/* IMAGE */
+/* IMAGE 
 img {
     border-radius: 10px;
     box-shadow: 0 0 25px rgba(0, 200, 255, 0.2);
+}*/
+
+
+/* GRID DE AMENAZAS */
+.amenazas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* TARJETAS */
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(56,189,248,0.6);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 /* BUTTONS */
