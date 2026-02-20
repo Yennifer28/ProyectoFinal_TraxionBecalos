@@ -8,3 +8,4 @@ Simulación interactiva de un sistema corporativo bajo ataque.
 ## Tecnologías utilizadas
 - HTML5
 - CSS3
+- JavaScript
